@@ -2,12 +2,10 @@ package uebung1.control;
 
 public class GermanTranslator implements Translator {
 	public String date = "Okt/2023"; // Default-Wert
-	/**Test2**/
 	/**
 	 * Methode zur Übersetzung einer Zahl in eine String-Repraesentation
 	 */
 	public String translateNumber( int number ) {
-		System.out.println("Hallo");
 		return NumberDatabase.zahlenSuche(number);
 	}
 
