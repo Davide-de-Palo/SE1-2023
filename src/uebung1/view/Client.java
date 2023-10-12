@@ -18,9 +18,7 @@ public class Client {
 			//
 			// Strenge Implementierung gegen das Interface Translator gewuenscht!
 			Translator translator = TranslatorFactory.creatGermanTranslator();
-			String ausgabe = translator.translateNumber(aNumber);
-			System.out.println("Das Ergebnis der Berechnung: " +
-					"[das Ergebnis an dieser Stelle]" + translator );
+			System.out.println("Das Ergebnis der Berechnung: " + translator.translateNumber(aNumber));
 
 		 }
 }
