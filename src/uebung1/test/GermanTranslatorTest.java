@@ -26,6 +26,7 @@ class GermanTranslatorTest {
         String value = translator.translateNumber(-1);
         assertEquals(value, "Übersetzung der Zahl -1 nicht möglich (1.0)");
     }
+    @Test
     void aNegativ2Test() {
         GermanTranslator translator = new GermanTranslator();
         String value = translator.translateNumber(-8);
