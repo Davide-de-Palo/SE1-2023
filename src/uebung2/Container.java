@@ -2,7 +2,7 @@ package uebung2;
 import java.util.ArrayList;
 public class Container {
     private ArrayList<Member> container = new ArrayList<Member>();
-    private class ContainerException extends Exception{
+    public class ContainerException extends Exception{
         public ContainerException(){
             super("ContainerException");
         }
@@ -30,7 +30,7 @@ public class Container {
                 return "";
             }
         }
-        return ID+" ist nicht im Container;";
+        return ID+" ist nicht im Container.";
     }
 
     public void dump(){
