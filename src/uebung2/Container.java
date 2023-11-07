@@ -1,14 +1,21 @@
 package uebung2;
+import uebung3.PersistenceStrategy;
+
 import java.util.ArrayList;
+
 public class Container {
+    private static Container objectContainer;
+    PersistenceStrategy strategy = null;
     private ArrayList<Member> container = new ArrayList<Member>();
-    public class ContainerException extends Exception{
-        public ContainerException(){
-            super("ContainerException");
+
+    private Container(){
+    }
+
+    public static Container getContainer(){
+        if (objectContainer == null){
+            objectContainer = new Container();
         }
-        public ContainerException(String expetionText){
-            super (expetionText);
-        }
+        return objectContainer;
     }
 
     public void addMember(Member member) throws ContainerException{
@@ -20,7 +27,8 @@ public class Container {
             }
             container.add(member);
         }
-        catch ( ContainerException e){
+        catch (NullPointerException e){
+            throw new ContainerException();
         }
     }
     public String deleteMember(Integer ID){

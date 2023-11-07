@@ -21,15 +21,15 @@ class ContainerTest {
     }
     @Test
     void ContainerTestAddMember() throws Container.ContainerException {
-        Member m1 = new ConcreteMember();
+        Member m1 = new ConcreteMember(1);
         container.addMember(m1);
         assertEquals(container.size(), 1);
     }
 
     @Test
     void ContainerTestAddMember2() throws Container.ContainerException {
-        Member m1 = new ConcreteMember();
-        Member m2 = new ConcreteMember();
+        Member m1 = new ConcreteMember(1);
+        Member m2 = new ConcreteMember(2);
         container.addMember(m1);
         container.addMember(m2);
         assertEquals(container.size(), 2);
@@ -37,8 +37,8 @@ class ContainerTest {
 
     @Test
     void ContainerTestDeleteMember() throws Container.ContainerException{
-        Member m1 = new ConcreteMember();
-        Member m2 = new ConcreteMember();
+        Member m1 = new ConcreteMember(1);
+        Member m2 = new ConcreteMember(2);
         container.addMember(m1);
         container.addMember(m2);
         assertEquals(container.deleteMember(4),"4 ist nicht im Container.");

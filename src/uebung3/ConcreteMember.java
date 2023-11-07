@@ -1,6 +1,6 @@
-package uebung2;
+package uebung3;
 
-public class ConcreteMember implements Member{
+public class ConcreteMember implements Member {
     private Integer id = null;
     public ConcreteMember(Integer id){
         this.id = id;
